@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+$ruler: 16px;
+$color-cyan: #1a918b;
+$color-bg: #ecf0f3;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color:$color-bg;
+}
+
+body, p, input, select, textarea, button {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: $ruler;
+}
+
+

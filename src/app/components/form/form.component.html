@@ -1,0 +1,92 @@
+<div class="container">
+  <img
+    class="loading"
+    *ngIf="isLoading"
+    src="./../../../assets/loading.gif"
+    alt=""
+  />
+  <form>
+    <div>
+      <h1>Informe seu CEP:</h1>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="CEP"
+          [(ngModel)]="cep"
+          name="cep"
+          (input)="onInputCep()"
+          maxlength="8"
+        />
+      </label>
+      <p *ngIf="invalidCep">Digite um CEP válido</p>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="Rua"
+          *ngIf="Adress.road"
+          value="{{ Adress.road }}"
+          disabled
+        />
+      </label>
+    </div>
+
+    <div>
+      <label for="">
+        <input type="text" placeholder="Número" *ngIf="Adress.road" />
+      </label>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="Complemento"
+          *ngIf="Adress.road"
+          value="{{ Adress.complement }}"
+        />
+      </label>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="Estado"
+          *ngIf="Adress.state"
+          value="{{ Adress.state }}"
+          disabled
+        />
+      </label>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="Cidade"
+          *ngIf="Adress.city"
+          value="{{ Adress.city }}"
+          disabled
+        />
+      </label>
+    </div>
+
+    <div>
+      <label for="">
+        <input
+          type="text"
+          placeholder="Bairro"
+          *ngIf="Adress.neighborhood"
+          value="{{ Adress.neighborhood }}"
+          disabled
+        />
+      </label>
+    </div>
+  </form>
+</div>
